@@ -1,11 +1,16 @@
-import React from "react";
-import "./style.css";
+import React, { useState } from 'react';
+import './style.css';
+import CustomButton from './CustomButton/Custombutton';
 
 export default function App() {
+  const [firstbtnCount, setFirstbtnCount] = useState(0);
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <CustomButton name="Firstbtn" />
+      <br />
+      <CustomButton name="SecBtn" />
+      <br />
+      <CustomButton name="ThiBtn" />
     </div>
   );
 }
