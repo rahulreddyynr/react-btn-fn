@@ -3,24 +3,19 @@ import './style.css';
 import CustomButtonSec from './CustomButton/CustomButtonSec';
 
 export default function App() {
-  const [FCount, SetFcount] = useState(0);
+  const [Count, Setcount] = useState(0);
 
-  const onClickCountHandler = (name) => {
-    if (name == 'Firstbtn') {
-      SetFcount((preState) => preState + 1);
-    }
+  const onClickCountHandler = () => {
+    Setcount((preState) => preState + 1);
   };
-  console.log('FCount :', FCount);
+  console.log('FCount :', Count);
   return (
     <div>
       <CustomButtonSec
-        name="Firstbtn"
+        name="Incriment btn"
         onClickCountHandler={onClickCountHandler}
+        Count={Count}
       />
-      <br />
-      <CustomButtonSec name="SecBtn" />
-      <br />
-      <CustomButtonSec name="ThiBtn" />
     </div>
   );
 }
